@@ -1,0 +1,103 @@
+@import '../Ultility/variable' ; 
+.web--dev {
+    padding: 2em 0;
+    margin: 0 0 6em 0 ;
+    display: flex;
+    .web--dev__container{
+        display: grid;
+        @include grid-gtc-3(1fr , 5rem ,1fr) ;
+        justify-content: baseline;
+        align-items: center;
+        margin: 0 4em;
+        .web--dev__left {
+            padding: 1em 2em;
+            p {
+                font-size: $font-size-normal;
+                color: gray;
+                margin: .5em 0;
+            }
+            h3 {
+                font-size: $font-size-large ;
+                color: black;
+                margin: .5em 0;
+            }
+            .web--dev__icon {
+                @include dsply-flex-cntr(flex-start ,flex-start) ;
+                margin-top: 2em;
+                .web--dev__icon__right , .web--dev__icon__left {
+                    @include dsply-column-cntr(flex-start , flex-start) ;
+                    color: white;
+                    transition: all .5s ease-in-out;
+                    &:hover span{
+                        color: #13B237;
+                    }
+                    i {
+                        padding: .7rem;
+                        background-color: #13B237;
+                        border-radius: .5rem;
+                        font-size: $font-size-large;
+                        margin: .5em 0;
+                    }
+                    span {
+                        font-size: $font-size-normal;
+                        font-weight: 500;
+                        color: black;
+                        margin: .15em 0;
+                    }
+                    &:hover {
+                        transform: translateY(-3rem);
+                    }
+                }
+                .web--dev__icon__left {
+                    i {
+                        background-color: #5ED3F3;
+                    }
+                    &:hover span{
+                        color: #5ED3F3;
+                    }
+                }
+            }
+        }
+        .web--dev__right {
+            padding: 1.5em 2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                object-fit: contain;
+                align-self: center;
+            }
+        }
+    }
+}
+.hidden {
+    display: none;
+}
+.move__left__animate {
+    animation: move-left 1s ease-in-out forwards;
+}
+.move__right__animate {
+    animation: move-right 1s ease-in-out forwards;
+}
+@keyframes move-left {
+    0%{
+        transform: translateX(-40rem);
+        opacity: 0;
+        display: none;
+    }
+    100%{
+        transform: translateX(0rem);
+        opacity: 1;
+    }
+}
+@keyframes move-right {
+    0%{
+        transform: translateX(+30rem);
+        opacity: 0;
+        display: none;
+    }
+    100%{
+        transform: translateX(0rem);
+        opacity: 1;
+    }
+}

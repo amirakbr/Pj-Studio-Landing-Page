@@ -1,0 +1,41 @@
+@import '../Ultility/variable' ;
+.register {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    padding: 2em 2em;
+    margin: 0 0 6em 0 ;
+    .register__container {
+        display: grid;
+        grid-template-columns: 1fr 4rem 1fr;
+        align-items: center;
+        justify-content: center;
+        padding: .5em;
+        .register__left {
+            margin-left: 3em;
+            h4 {
+                font-size: $font-size-super-large;
+                margin: .5em 0;
+                line-height: 5rem;
+            }
+            .pp {
+                color: gray;
+                font-size: $font-size-normal;
+                margin: .5em 0 ;
+            }
+        }
+    }
+}
+.hidden {
+    display: none;
+}
+.scale__aniamtion {
+    animation: scaleanimation 1s ease-in-out forwards;
+}
+@keyframes scaleanimation {
+    0%{
+        transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}

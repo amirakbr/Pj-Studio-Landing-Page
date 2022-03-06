@@ -1,0 +1,46 @@
+@import "../Ultility/variable" ; 
+.navbar {
+    @include dsply-flex-cntr-cntr ; 
+    justify-content:space-between;
+    background: $dark--clr;
+    padding: 0em 2em;
+    height: 10vh;
+    background-color:white;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: +1000;
+    transition: all .5s ease-out;
+    .navbar__logo {
+        height: 100%;
+    }
+    .navbar__list {
+        @include dsply-flex-cntr-cntr ; 
+        .navbar__list__item  {
+            margin: 0 .7em;
+            font-size: $font-size-normal;
+            @include dsply-column-cntr-cntr ;
+            &::before{
+                @include before-link
+            }
+            &::after {
+                @include after-link ; 
+            }
+            &:hover::after {
+                bottom: -.2em;
+                opacity: 1;
+            }
+            &:hover::before {
+                top: -.2em;
+                opacity: 1;
+            }
+        }
+    }
+    .navbar__button {
+        font-size: $font-size-up-small;
+    }
+}    
+.navbar__shaddow {
+    box-shadow: 0.1em 0em 0.5em 0.5em #404040c7;
+}

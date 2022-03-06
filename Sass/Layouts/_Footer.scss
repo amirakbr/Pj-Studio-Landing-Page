@@ -1,0 +1,128 @@
+@import '../Ultility/variable' ;
+.footer {
+    display: flex;
+    width: 100%;
+    margin-top: 5em;
+    background-color: rgb(255, 255, 255);
+    .footer__container{
+        @include grid-gtc-3(1fr , 3fr , 2fr) ; 
+        margin: 3em 1.5em 0 1.5em; 
+        padding: .5em 1em;
+        grid-gap: 0 1em;
+        justify-content: center;
+        align-items: flex-start;
+        .footer__elem1 {
+            @include dsply-column-cntr-cntr ;
+            img {
+                height: 6rem;
+                width: 15rem;
+            }
+            p {
+                color : gray  ; 
+                font-size: $font-size-up-small;
+                margin-top : 1em ;
+                @include dsply-column-cntr-cntr ;
+                text-align: center;
+            }
+            .footer__elem1--icon {
+                display: flex;
+                margin-top : 1em ;
+                @include dsply-flex-cntr-cntr ;
+                i {
+                    @include dsply-flex-cntr-cntr;
+                    width: 4rem;
+                    height: 4rem;
+                    padding: .5rem;
+                    margin: 0 .1em;
+                    background: cornflowerblue;
+                    color: white;
+                    font-size: $font-size-normal;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .footer__elem2 {
+            display: flex;
+            justify-content: space-around;
+            .footer__elem2--right , .footer__elem2--left {
+                display: flex;
+                flex-direction: column;
+                h2 {
+                    font-size : $font-size-large ; 
+                    margin: .5rem 0 ;
+                }
+                ul {
+                    list-style-type: none;
+                    margin: .8rem 0 ;
+                    li {
+                        font-size: $font-size-up-small;
+                        color: gray;
+                        display: flex;
+                        flex-direction: column;
+                        width: max-content;
+                        margin-top: .4em;
+                        &::before {
+                            @include before-link ;
+                        }
+                        &::after {
+                            @include after-link ;
+                        }
+                        &:hover::after {
+                            bottom: 0em;
+                            opacity: 1;
+                        }
+                        &:hover::before {
+                            top: 0em;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        .footer__elem3 {
+            display: flex;
+            flex-direction: column;
+            h2 {
+                font-size : $font-size-large ; 
+                margin: .5rem 0 ;
+            }
+            p {
+                font-size: $font-size-up-small;
+                color: gray;
+                margin: 1rem 0 ;
+            }
+            form {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                margin-top: 1em;
+                margin-bottom: 1em;
+                border-radius: .3em;
+                border: .1em solid black;
+                padding: .2em;
+                background-color: white;
+                input {
+                    font-size: $font-size-small;
+                    padding: .2em 0 .2em .2em ; 
+                    border-radius: .3em;
+                    transition: all 0.3s ease-in;
+                    &:focus {
+                        padding-left: .8em;
+                        font-size: $font-size-up-small;
+                    }
+                }
+                button {
+                    padding: .1em !important;
+                    @include dsply-flex-cntr-cntr ;
+                    box-shadow: none !important;
+                    p {
+                        color: white ;
+                        transition: all .4s ease-in-out;
+                    }
+                    &:hover p{
+                        color: black !important;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+@import '../Ultility/variable' ; 
+
+
+
+.process {
+    .process__container {
+        @include grid-gtc-4(1fr ,1fr,1fr,1fr) ;
+        grid-gap: 2em;
+        margin: 5em 2em 5em 2em;
+            .process__title__container{
+                @include dsply-column-cntr-cntr ; 
+                transition: all .5s ease-in-out;
+                box-shadow: .5rem 1.1rem 1rem 1rem rgba(60,60,60,0.32);
+                background-color: rgb(255, 246, 230);
+                .process__title{
+                    @include dsply-column-cntr-cntr ; 
+                    h4 {
+                        font-size: $font-size-large;
+                    }
+                    span {
+                        margin-top: 1em;
+                        color: gray;
+                        font-size: $font-size-normal;
+                    }
+                }
+                &:hover {
+                    background-color: rgb(236, 231, 255);
+                    box-shadow: .5rem 1.1rem 1.5rem 1rem rgba(60, 60, 60, 0.646);
+                    transform: translateY(-4rem);
+                }
+            }
+            .process__card{
+                padding: 3em 1em;      
+                background-color: rgb(236, 231, 255);;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transition: all .8s ease-out , box-shadow .9s linear;
+                &:hover {
+                    background-color: rgb(255, 246, 230);
+                    box-shadow: .5rem 1.1rem 1.5rem 1rem rgba(60, 60, 60, 0.646);
+                    transform: translateY(-4rem);
+                }
+                .process__card-img {
+                    width: 10rem;
+                }
+                h4 {
+                    font-size: $font-size-large;
+                    margin-top: 1em;
+                    text-align: center;
+                }
+                span{
+                    width: auto;
+                    margin: 1em;
+                    text-align: center;
+                    font-size: $font-size-normal;
+                    color: gray;
+                }
+                .process__card--img{
+                    width: auto;
+                    height: 5rem;
+                }
+    
+            }        
+    }
+}
+.process__anim {
+    animation: process__animation 1s ease-in-out forwards;
+}
+@keyframes process__animation{
+    from{
+        transform: translateY(8rem);
+        opacity: 0;
+        display: none;
+    }
+    to{
+        transform: translateY(0rem) !important;
+        opacity: 1 !important;
+        display: block !important;
+    }
+}

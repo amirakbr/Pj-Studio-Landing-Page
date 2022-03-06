@@ -1,0 +1,161 @@
+@import './LivePhone' ;
+@import '../Ultility/variable' ;
+.feature{
+    margin: 15em 0;
+    display: flex;
+    .featuer__container {
+        @include grid-gtc-2(1fr , 1fr) ; 
+        margin: 1.5em 2.5em;
+        width: 100%;
+        .phone__container{
+            display: flex;
+            justify-content: flex-end;
+            .feature__phone{
+                display: flex;
+                flex-direction: column;
+                clear: both;
+                width: 20rem;
+                height: 32rem;
+                border-radius: 1rem;
+                border: .1rem solid black;
+                top: -4rem;
+                margin-right: 7em;
+                align-items: flex-end;
+                transition: all .8s ease-in-out;
+            &:hover {
+                transform: translateY(-3rem);
+            }
+                .phone__up {
+                    width: 100%;
+                    height: 2rem;
+                    background-color: rgb(0, 0, 0);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 1rem 1rem 0 0 ;
+                    .phone__up--cam {
+                        height: 50%;
+                        width: 1rem;
+                        background-color: #6C6D70;
+                        margin-right: .5em;
+                        border-radius: 50%;
+                    }
+                    .phone__up--spk {
+                        height: 30%;
+                        width: 2rem;
+                        background-color: #6C6D70;
+                        margin-right: .5em;
+                        border-radius: 2rem;
+                    }    
+                    .phone__up--mic {
+                        height: 50%;
+                        width: 1rem;
+                        background-color: #6C6D70;
+                        border-radius: 50%;
+                    }
+                }
+                .phone__middle {
+                    background-image: url('./Media/backgroundphone/1.jpg');
+                    background-repeat: no-repeat;
+                    background-size: 100% ;
+                    background-position: center;
+                    width: 100%;
+                    height: 28rem;
+                    @include dsply-column-cntr-cntr ;
+                }
+                .phone__bottom {
+                    width: 100%;
+                    height: 2rem;
+                    background-color: black;
+                    border-radius: 0 0 1rem 1rem ;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .phone__button--key {
+                        width: 1.7rem;
+                        height: 70%;
+                        background-color: #6C6D70;
+                        border: .1em solid white;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }           
+        .feature__content {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            .feature__context {
+                font-size: $font-size-normal;
+                color: gray;
+                line-height: 3rem;
+                width: 100%;
+            }
+            .feature__header {
+                font-size: $font-size-large;
+                line-height: 4rem;
+                width: 100%;
+            }
+        }
+        .feature__button {
+            display: flex;
+            height: 5rem;
+            width: 100%;
+            .left__feature__button  , .right__feature__button{
+                width: 30%;
+                margin: 0 auto;
+                img {
+                    width: 10rem;
+                    height: 10rem;
+                    transition: all .8s ease-in-out;
+                     &:hover {
+                        transform: translateY(-3rem);
+                     }
+                }
+            }
+            .right__feature__button {
+                img {
+                    float: left;
+                }
+            }
+            .left__feature__button {
+                img {
+                    float: right;
+                }
+            }
+        }
+    }    
+}
+.hidden {
+    display: none;
+}
+.move__left__animate {
+    animation: move-left 1s ease-in-out forwards;
+}
+.move__right__animate {
+    animation: move-right 1s ease-in-out forwards;
+}
+@keyframes move-left {
+    0%{
+        transform: translateX(-40rem);
+        opacity: 0;
+        display: none;
+    }
+    100%{
+        transform: translateX(0rem);
+        opacity: 1;
+    }
+}
+@keyframes move-right {
+    0%{
+        transform: translateX(+30rem);
+        opacity: 0;
+        display: none;
+    }
+    100%{
+        transform: translateX(0rem);
+        opacity: 1;
+    }
+}
