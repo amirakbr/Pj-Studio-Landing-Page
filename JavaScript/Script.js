@@ -1,4 +1,4 @@
-nav = document.querySelector('.hero') ;
+/*nav = document.querySelector('.hero') ;
 navTop = nav.offsetTop + 20 ;
 const  navbarshaddow = document.querySelector('.navbar') ;
 function fixedNav(e) {
@@ -57,3 +57,4 @@ image.onload = function () {
   console.log('hi');
   preloader.classList.add('hidden') ;
 };
+*/

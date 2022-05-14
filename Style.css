@@ -247,10 +247,6 @@ li {
   }
 }
 
-.hidden {
-  display: none;
-}
-
 .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -506,6 +502,10 @@ li {
 .animated__container {
   width: 100%;
   height: 100%;
+  background-image: url("./Media/Image/Hero/Planing.jpg");
+  background-position: right center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .animated__container div {
@@ -530,7 +530,7 @@ li {
 
 .animated__container .animated__content1 {
   position: absolute;
-  top: 3rem;
+  top: 0;
   left: 0;
   -webkit-animation: animcont1 1s 3.5s ease-in-out forwards;
           animation: animcont1 1s 3.5s ease-in-out forwards;
@@ -539,8 +539,8 @@ li {
 
 .animated__container .animated__content2 {
   position: absolute;
-  top: 3rem;
-  right: -3rem;
+  top: 0;
+  right: 0;
   -webkit-animation: animcont1 1s 4.8s ease-in-out forwards;
           animation: animcont1 1s 4.8s ease-in-out forwards;
   border-radius: 0 0 0rem 3rem;
@@ -548,8 +548,8 @@ li {
 
 .animated__container .animated__content3 {
   position: absolute;
-  bottom: 3rem;
-  right: -3rem;
+  bottom: 0;
+  right: 0;
   -webkit-animation: animcont1 1s 6.1s ease-in-out forwards;
           animation: animcont1 1s 6.1s ease-in-out forwards;
   border-radius: 3rem 0 0rem 0rem;
@@ -557,7 +557,7 @@ li {
 
 .animated__container .animated__content4 {
   position: absolute;
-  bottom: 3rem;
+  bottom: 0;
   left: 0;
   -webkit-animation: animcont1 1s 8s ease-in-out forwards;
           animation: animcont1 1s 8s ease-in-out forwards;
@@ -805,17 +805,16 @@ li {
 }
 
 .hero {
+  margin: 5% auto;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   display: -ms-grid;
   display: grid;
-  background-image: url("./Media/Image/Hero/Planing.jpg");
-  background-position: right center;
-  background-size: 50% 90%;
-  background-repeat: no-repeat;
   padding: 0 2em;
-  height: 90vh;
-  background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5rem;
 }
 
 .hero .hero__container {
@@ -1053,6 +1052,10 @@ li {
 .animated__container {
   width: 100%;
   height: 100%;
+  background-image: url("./Media/Image/Hero/Planing.jpg");
+  background-position: right center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .animated__container div {
@@ -1077,7 +1080,7 @@ li {
 
 .animated__container .animated__content1 {
   position: absolute;
-  top: 3rem;
+  top: 0;
   left: 0;
   -webkit-animation: animcont1 1s 3.5s ease-in-out forwards;
           animation: animcont1 1s 3.5s ease-in-out forwards;
@@ -1086,8 +1089,8 @@ li {
 
 .animated__container .animated__content2 {
   position: absolute;
-  top: 3rem;
-  right: -3rem;
+  top: 0;
+  right: 0;
   -webkit-animation: animcont1 1s 4.8s ease-in-out forwards;
           animation: animcont1 1s 4.8s ease-in-out forwards;
   border-radius: 0 0 0rem 3rem;
@@ -1095,8 +1098,8 @@ li {
 
 .animated__container .animated__content3 {
   position: absolute;
-  bottom: 3rem;
-  right: -3rem;
+  bottom: 0;
+  right: 0;
   -webkit-animation: animcont1 1s 6.1s ease-in-out forwards;
           animation: animcont1 1s 6.1s ease-in-out forwards;
   border-radius: 3rem 0 0rem 0rem;
@@ -1104,7 +1107,7 @@ li {
 
 .animated__container .animated__content4 {
   position: absolute;
-  bottom: 3rem;
+  bottom: 0;
   left: 0;
   -webkit-animation: animcont1 1s 8s ease-in-out forwards;
           animation: animcont1 1s 8s ease-in-out forwards;
@@ -1402,10 +1405,6 @@ li {
           box-shadow: 4px 7px 37px 12px #3C3C3C;
   -webkit-transform: translateX(-10rem);
           transform: translateX(-10rem);
-}
-
-.hidden {
-  display: none;
 }
 
 .move__left__animate {
@@ -1725,10 +1724,6 @@ li {
   float: right;
 }
 
-.hidden {
-  display: none;
-}
-
 .move__left__animate {
   -webkit-animation: move-left 1s ease-in-out forwards;
           animation: move-left 1s ease-in-out forwards;
@@ -1816,6 +1811,37 @@ li {
   font-size: .9rem;
   color: white;
   margin-top: .5em;
+}
+
+.process {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.process .process__header {
+  font-size: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.process .process__header::after, .process .process__header::before {
+  content: "down";
+  display: block;
+  clear: both;
+  -webkit-animation: waving 5s linear infinite;
+          animation: waving 5s linear infinite;
 }
 
 .process .process__container {
@@ -1967,6 +1993,52 @@ li {
   }
 }
 
+@-webkit-keyframes waving {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  75% {
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes waving {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  75% {
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 .register {
   display: -ms-grid;
   display: grid;
@@ -2004,10 +2076,6 @@ li {
   color: gray;
   font-size: 2rem;
   margin: .5em 0;
-}
-
-.hidden {
-  display: none;
 }
 
 .scale__aniamtion {
@@ -2159,10 +2227,6 @@ li {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-}
-
-.hidden {
-  display: none;
 }
 
 .move__left__animate {

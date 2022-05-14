@@ -3,6 +3,20 @@
 
 
 .process {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .process__header {
+        font-size: $font-size-up-large;
+        display: flex;
+        align-items: center;
+        &::after , &::before{
+            content: "down" ; 
+            display: block ; 
+            clear: both ; 
+            animation: waving 5s linear infinite; 
+        }
+    }
     .process__container {
         @include grid-gtc-4(1fr ,1fr,1fr,1fr) ;
         grid-gap: 2em;
@@ -78,4 +92,21 @@
         opacity: 1 !important;
         display: block !important;
     }
+}
+@keyframes waving {
+    0%{
+        transform: translateY(0) ; 
+    }
+    25%{
+        transform: translateY(.5rem) ; 
+    }
+    50%{
+        transform: translateY(0) ; 
+    }
+    75%{
+        transform: translateY(-.5rem) ; 
+    }
+    100%{
+        transform: translateY(0) ; 
+    }   
 }
