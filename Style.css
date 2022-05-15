@@ -610,7 +610,7 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 5rem;
+  gap: 5.1rem;
 }
 
 .hero .hero__container {
