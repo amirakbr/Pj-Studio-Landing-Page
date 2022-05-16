@@ -515,6 +515,7 @@ li {
           justify-content: center;
   height: 15rem;
   text-align: center;
+  overflow: hidden;
 }
 
 .animated__container div span {
@@ -525,56 +526,75 @@ li {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-animation: animcont1 1s ease-in-out forwards;
-          animation: animcont1 1s ease-in-out forwards;
+  -webkit-animation: animcont1 0.8s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
+          animation: animcont1 0.8s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
   border-radius: 0 0 3rem 0rem;
   overflow: hidden;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 .animated__container .animated__content1 span {
-  height: 100%;
-  -webkit-transform: translateY(calc(100% + 1rem));
-          transform: translateY(calc(100% + 1rem));
-}
-
-.animated__container .animated__content1::after {
-  position: absolute;
-  background-color: red;
-  width: 100%;
-  height: 100%;
-  z-index: +1;
-  content: "";
-  display: table;
-  clear: both;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: translateY(calc(150%));
+          transform: translateY(calc(150%));
+  -webkit-animation: animationdooropen 0.5s 1s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
+          animation: animationdooropen 0.5s 1s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
 }
 
 .animated__container .animated__content2 {
   position: absolute;
   top: 0;
   right: 0;
-  -webkit-animation: animcont1 1s 4.8s ease-in-out forwards;
-          animation: animcont1 1s 4.8s ease-in-out forwards;
-  border-radius: 0 0 0rem 3rem;
+  -webkit-animation: animcont1 0.8s 1s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
+          animation: animcont1 0.8s 1s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
+  border-radius: 0 0rem 0 3rem;
+  overflow: hidden;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.animated__container .animated__content2 span {
+  -webkit-transform: translateY(calc(150%));
+          transform: translateY(calc(150%));
+  -webkit-animation: animationdooropen 0.5s 2s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
+          animation: animationdooropen 0.5s 2s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
 }
 
 .animated__container .animated__content3 {
   position: absolute;
   bottom: 0;
   right: 0;
-  -webkit-animation: animcont1 1s 6.1s ease-in-out forwards;
-          animation: animcont1 1s 6.1s ease-in-out forwards;
+  -webkit-animation: animcont2 0.8s 2s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
+          animation: animcont2 0.8s 2s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
   border-radius: 3rem 0 0rem 0rem;
+  overflow: hidden;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.animated__container .animated__content3 span {
+  -webkit-transform: translateY(calc(150%));
+          transform: translateY(calc(150%));
+  -webkit-animation: animationdoorclose 0.5s 3s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
+          animation: animationdoorclose 0.5s 3s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
 }
 
 .animated__container .animated__content4 {
   position: absolute;
   bottom: 0;
   left: 0;
-  -webkit-animation: animcont1 1s 8s ease-in-out forwards;
-          animation: animcont1 1s 8s ease-in-out forwards;
+  -webkit-animation: animcont2 0.8s 3s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
+          animation: animcont2 0.8s 3s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
   border-radius: 0 3rem 0rem 0rem;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.animated__container .animated__content4 span {
+  -webkit-transform: translateY(calc(-150%));
+          transform: translateY(calc(-150%));
+  -webkit-animation: animationdoorclose 0.5s 4s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
+          animation: animationdoorclose 0.5s 4s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
 }
 
 @-webkit-keyframes anim {
@@ -614,6 +634,72 @@ li {
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes animcont2 {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes animcont2 {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes animationdooropen {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes animationdooropen {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes animationdoorclose {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes animationdoorclose {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 
@@ -877,6 +963,7 @@ li {
           justify-content: center;
   height: 15rem;
   text-align: center;
+  overflow: hidden;
 }
 
 .animated__container div span {
@@ -887,56 +974,75 @@ li {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-animation: animcont1 1s ease-in-out forwards;
-          animation: animcont1 1s ease-in-out forwards;
+  -webkit-animation: animcont1 0.8s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
+          animation: animcont1 0.8s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
   border-radius: 0 0 3rem 0rem;
   overflow: hidden;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 .animated__container .animated__content1 span {
-  height: 100%;
-  -webkit-transform: translateY(calc(100% + 1rem));
-          transform: translateY(calc(100% + 1rem));
-}
-
-.animated__container .animated__content1::after {
-  position: absolute;
-  background-color: red;
-  width: 100%;
-  height: 100%;
-  z-index: +1;
-  content: "";
-  display: table;
-  clear: both;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: translateY(calc(150%));
+          transform: translateY(calc(150%));
+  -webkit-animation: animationdooropen 0.5s 1s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
+          animation: animationdooropen 0.5s 1s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
 }
 
 .animated__container .animated__content2 {
   position: absolute;
   top: 0;
   right: 0;
-  -webkit-animation: animcont1 1s 4.8s ease-in-out forwards;
-          animation: animcont1 1s 4.8s ease-in-out forwards;
-  border-radius: 0 0 0rem 3rem;
+  -webkit-animation: animcont1 0.8s 1s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
+          animation: animcont1 0.8s 1s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
+  border-radius: 0 0rem 0 3rem;
+  overflow: hidden;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.animated__container .animated__content2 span {
+  -webkit-transform: translateY(calc(150%));
+          transform: translateY(calc(150%));
+  -webkit-animation: animationdooropen 0.5s 2s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
+          animation: animationdooropen 0.5s 2s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
 }
 
 .animated__container .animated__content3 {
   position: absolute;
   bottom: 0;
   right: 0;
-  -webkit-animation: animcont1 1s 6.1s ease-in-out forwards;
-          animation: animcont1 1s 6.1s ease-in-out forwards;
+  -webkit-animation: animcont2 0.8s 2s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
+          animation: animcont2 0.8s 2s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
   border-radius: 3rem 0 0rem 0rem;
+  overflow: hidden;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.animated__container .animated__content3 span {
+  -webkit-transform: translateY(calc(150%));
+          transform: translateY(calc(150%));
+  -webkit-animation: animationdoorclose 0.5s 3s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
+          animation: animationdoorclose 0.5s 3s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
 }
 
 .animated__container .animated__content4 {
   position: absolute;
   bottom: 0;
   left: 0;
-  -webkit-animation: animcont1 1s 8s ease-in-out forwards;
-          animation: animcont1 1s 8s ease-in-out forwards;
+  -webkit-animation: animcont2 0.8s 3s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
+          animation: animcont2 0.8s 3s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
   border-radius: 0 3rem 0rem 0rem;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.animated__container .animated__content4 span {
+  -webkit-transform: translateY(calc(-150%));
+          transform: translateY(calc(-150%));
+  -webkit-animation: animationdoorclose 0.5s 4s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
+          animation: animationdoorclose 0.5s 4s cubic-bezier(0, 2.22, 0.21, 0.91) forwards;
 }
 
 @keyframes anim {
@@ -956,6 +1062,39 @@ li {
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+
+@keyframes animcont2 {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes animationdooropen {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes animationdoorclose {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 
