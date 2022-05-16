@@ -27,6 +27,23 @@
               i {
                   margin-left: 1.5em
               }
+              .demo__container {
+                width: max-content;
+                position: absolute;
+                height: max-content;
+                color: black;
+                top: 100%;
+                left: 0 ;
+                background-color: red ; 
+                border: .1rem solid $primary--clr ; 
+                @include dsply-column-cntr(flex-start , space-evenly) ; 
+                ul {
+                  @include dsply-column-cntr(flex-start , space-evenly ) ; 
+                  li {
+                    padding: .5rem 0 .5rem 1rem;
+                  }
+                }
+              }
           }
           .hero__device--type {
               color: $dark--clr;

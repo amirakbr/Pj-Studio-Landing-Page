@@ -783,6 +783,54 @@ li {
   margin-left: 1.5em;
 }
 
+.hero .hero__container .hero__type--selector .hero__button .demo__container {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  color: black;
+  top: 100%;
+  left: 0;
+  background-color: red;
+  border: 0.1rem solid #bb1eff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.hero .hero__container .hero__type--selector .hero__button .demo__container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.hero .hero__container .hero__type--selector .hero__button .demo__container ul li {
+  padding: .5rem 0 .5rem 1rem;
+}
+
 .hero .hero__container .hero__type--selector .hero__device--type {
   color: black;
   font-size: 2rem;
