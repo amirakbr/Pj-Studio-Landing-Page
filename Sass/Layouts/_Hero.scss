@@ -1,7 +1,7 @@
 @import "../Ultility/variable";
 @import "../Layouts/Animated" ;
 .hero {
-  margin: 5% auto ; 
+  margin: 3% auto 5% auto ; 
   @include grid-gtc-2(1fr, 1fr);
   align-items: center;
   gap: 5rem;
@@ -24,23 +24,59 @@
           @include dsply-flex-cntr-cntr ; 
           .hero__button {
           @include dsply-flex-cntr-cntr ; 
+          transition: all .3s ease-in-out;
               i {
                   margin-left: 1.5em
               }
+
+              &:hover {
+                box-shadow: inset 0rem 0rem 5rem -4rem $primary--clr;
+                .demo__container {
+                  transform: scaleY(1);
+                }
+              }
               .demo__container {
-                width: max-content;
                 position: absolute;
                 height: max-content;
                 color: black;
                 top: 100%;
                 left: 0 ;
-                background-color: red ; 
-                border: .1rem solid $primary--clr ; 
                 @include dsply-column-cntr(flex-start , space-evenly) ; 
+                transform-origin: top;
+                transform: scaleY(0);
+                transition: all .5s ease-in-out;
+                z-index: +1;    
                 ul {
                   @include dsply-column-cntr(flex-start , space-evenly ) ; 
+                  margin-top: 1rem;
+                  border: .3rem solid $primary--clr ; 
+                  background-color: $light--clr;
+                  padding: 1rem 2rem 0 0 ;
+                  border-radius: 1rem ; 
+                  width: 38rem;
+                  z-index: +2;
+                  box-shadow: inset 0rem 0rem 5rem -2rem $primary--clr;
                   li {
-                    padding: .5rem 0 .5rem 1rem;
+                    padding: .5rem 2rem .5rem 1rem;
+                    font-size: $font-size-sup-small;
+                    transition: all .3s ease-in-out;
+                    @include dsply-flex-cntr-cntr ; 
+                    z-index: +4;
+                    &::before {
+                      content: "";
+                      display: table;
+                      clear: both;
+                      width: 0rem;
+                      border-bottom: .15rem solid black;
+                      transition: all .2s ease-in-out; 
+                    }
+                    &:hover {
+                      transform: translateX(1%);
+                      font-weight: 600;
+                    }
+                    &:hover:before {
+                      width: 3rem;
+                    }
                   }
                 }
               }
