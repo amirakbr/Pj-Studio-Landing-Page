@@ -27,14 +27,21 @@
         }
     }
     .process__container {
-        @include grid-gtc-4(1fr ,1fr,1fr,1fr) ;
-        grid-gap: 2em;
-        margin: 5em 2em 5em 2em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5rem;
+        margin-top: 5%;
+        margin-bottom: 10rem;
             .process__title__container{
                 @include dsply-column-cntr-cntr ; 
                 transition: all .5s ease-in-out;
-                box-shadow: .5rem 1.1rem 1rem 1rem rgba(60,60,60,0.32);
+                padding: 3em 1em;
+                box-shadow: 0rem 1rem 1rem -1rem rgba(60,60,60,0.32);
                 background-color: rgb(255, 246, 230);
+                border-radius: 2rem;
                 .process__title{
                     @include dsply-column-cntr-cntr ; 
                     h4 {
@@ -44,12 +51,13 @@
                         margin-top: 1em;
                         color: gray;
                         font-size: $font-size-normal;
+                        text-align: center;
                     }
                 }
                 &:hover {
                     background-color: rgb(236, 231, 255);
-                    box-shadow: .5rem 1.1rem 1.5rem 1rem rgba(60, 60, 60, 0.646);
-                    transform: translateY(-4rem);
+                    box-shadow: 0rem 2rem 1.5rem -.3rem rgba(60,60,60,0.32);
+                    transform: translateY(-4%);
                 }
             }
             .process__card{
@@ -58,11 +66,13 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                transition: all .8s ease-out , box-shadow .9s linear;
+                box-shadow: 0rem 1rem 2rem -2rem rgba(60,60,60,0.32);
+                transition: all .5s ease-out , box-shadow .3s linear;
+                border-radius: 2rem;
                 &:hover {
                     background-color: rgb(255, 246, 230);
-                    box-shadow: .5rem 1.1rem 1.5rem 1rem rgba(60, 60, 60, 0.646);
-                    transform: translateY(-4rem);
+                    box-shadow: 0rem 2rem 2rem -.5rem rgba(60,60,60,0.32);
+                    transform: translateY(-4%);
                 }
                 .process__card-img {
                     width: 10rem;

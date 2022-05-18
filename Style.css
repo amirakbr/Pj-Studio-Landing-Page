@@ -1494,27 +1494,50 @@ li {
 
 .feature {
   margin: 15em 0;
+  margin-top: 7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .feature .featuer__container {
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
   display: -ms-grid;
   display: grid;
-  margin: 1.5em 2.5em;
+  -ms-grid-columns: (minmax(47%, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(47%, 1fr));
+  gap: 5rem;
+  margin: 1.5em auto;
   width: 100%;
+  padding: 2rem 0;
+  background-color: rgba(226, 226, 226, 0.589);
+}
+
+.feature .featuer__container::before {
+  content: "";
+  display: table;
+  clear: both;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 0;
+  background-color: #bb1eff;
+  border-radius: 20rem 15rem 18rem 28rem / 19rem 12rem 22rem 22rem;
+  -webkit-animation: glovyanimation 8s linear infinite;
+          animation: glovyanimation 8s linear infinite;
+  z-index: -1;
+  rotate: -10deg;
 }
 
 .feature .featuer__container .phone__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .feature .featuer__container .phone__container .feature__phone {
@@ -1531,7 +1554,6 @@ li {
   border-radius: 1rem;
   border: .1rem solid black;
   top: -4rem;
-  margin-right: 7em;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -1730,6 +1752,42 @@ li {
   }
 }
 
+@-webkit-keyframes glovyanimation {
+  0% {
+    border-radius: 20rem 15rem 38rem 68rem / 19rem 12rem 22rem 22rem;
+  }
+  25% {
+    border-radius: 68rem 60rem 45rem 50rem / 15rem 27rem 40rem 50rem;
+  }
+  50% {
+    border-radius: 55rem 60rem 30rem 60rem / 19rem 37rem 34rem 35rem;
+  }
+  75% {
+    border-radius: 65rem 70rem 40rem 50rem / 19rem 47rem 54rem 55rem;
+  }
+  100% {
+    border-radius: 20rem 15rem 38rem 68rem / 19rem 12rem 22rem 22rem;
+  }
+}
+
+@keyframes glovyanimation {
+  0% {
+    border-radius: 20rem 15rem 38rem 68rem / 19rem 12rem 22rem 22rem;
+  }
+  25% {
+    border-radius: 68rem 60rem 45rem 50rem / 15rem 27rem 40rem 50rem;
+  }
+  50% {
+    border-radius: 55rem 60rem 30rem 60rem / 19rem 37rem 34rem 35rem;
+  }
+  75% {
+    border-radius: 65rem 70rem 40rem 50rem / 19rem 47rem 54rem 55rem;
+  }
+  100% {
+    border-radius: 20rem 15rem 38rem 68rem / 19rem 12rem 22rem 22rem;
+  }
+}
+
 .live__phone {
   width: 100%;
   height: 100%;
@@ -1824,12 +1882,24 @@ li {
 }
 
 .process .process__container {
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 2em;
-  margin: 5em 2em 5em 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 5rem;
+  margin-top: 5%;
+  margin-bottom: 10rem;
 }
 
 .process .process__container .process__title__container {
@@ -1848,9 +1918,11 @@ li {
           justify-content: center;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-  -webkit-box-shadow: 0.5rem 1.1rem 1rem 1rem rgba(60, 60, 60, 0.32);
-          box-shadow: 0.5rem 1.1rem 1rem 1rem rgba(60, 60, 60, 0.32);
+  padding: 3em 1em;
+  -webkit-box-shadow: 0rem 1rem 1rem -1rem rgba(60, 60, 60, 0.32);
+          box-shadow: 0rem 1rem 1rem -1rem rgba(60, 60, 60, 0.32);
   background-color: #fff6e6;
+  border-radius: 2rem;
 }
 
 .process .process__container .process__title__container .process__title {
@@ -1877,14 +1949,15 @@ li {
   margin-top: 1em;
   color: gray;
   font-size: 2rem;
+  text-align: center;
 }
 
 .process .process__container .process__title__container:hover {
   background-color: #ece7ff;
-  -webkit-box-shadow: 0.5rem 1.1rem 1.5rem 1rem rgba(60, 60, 60, 0.646);
-          box-shadow: 0.5rem 1.1rem 1.5rem 1rem rgba(60, 60, 60, 0.646);
-  -webkit-transform: translateY(-4rem);
-          transform: translateY(-4rem);
+  -webkit-box-shadow: 0rem 2rem 1.5rem -0.3rem rgba(60, 60, 60, 0.32);
+          box-shadow: 0rem 2rem 1.5rem -0.3rem rgba(60, 60, 60, 0.32);
+  -webkit-transform: translateY(-4%);
+          transform: translateY(-4%);
 }
 
 .process .process__container .process__card {
@@ -1900,18 +1973,21 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all .8s ease-out , -webkit-box-shadow .9s linear;
-  transition: all .8s ease-out , -webkit-box-shadow .9s linear;
-  transition: all .8s ease-out , box-shadow .9s linear;
-  transition: all .8s ease-out , box-shadow .9s linear , -webkit-box-shadow .9s linear;
+  -webkit-box-shadow: 0rem 1rem 2rem -2rem rgba(60, 60, 60, 0.32);
+          box-shadow: 0rem 1rem 2rem -2rem rgba(60, 60, 60, 0.32);
+  -webkit-transition: all .5s ease-out , -webkit-box-shadow .3s linear;
+  transition: all .5s ease-out , -webkit-box-shadow .3s linear;
+  transition: all .5s ease-out , box-shadow .3s linear;
+  transition: all .5s ease-out , box-shadow .3s linear , -webkit-box-shadow .3s linear;
+  border-radius: 2rem;
 }
 
 .process .process__container .process__card:hover {
   background-color: #fff6e6;
-  -webkit-box-shadow: 0.5rem 1.1rem 1.5rem 1rem rgba(60, 60, 60, 0.646);
-          box-shadow: 0.5rem 1.1rem 1.5rem 1rem rgba(60, 60, 60, 0.646);
-  -webkit-transform: translateY(-4rem);
-          transform: translateY(-4rem);
+  -webkit-box-shadow: 0rem 2rem 2rem -0.5rem rgba(60, 60, 60, 0.32);
+          box-shadow: 0rem 2rem 2rem -0.5rem rgba(60, 60, 60, 0.32);
+  -webkit-transform: translateY(-4%);
+          transform: translateY(-4%);
 }
 
 .process .process__container .process__card .process__card-img {
