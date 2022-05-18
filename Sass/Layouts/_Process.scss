@@ -11,12 +11,19 @@
         display: flex;
         align-items: center;
         &::after , &::before{
-            content: "\f063" +"\00A0" + "\00A0" +"\f063" ; 
+            content: url("../../svg/svgarrowbottom.svg");
             font-family: "Font Awesome 6 Free";
             font-weight: 900;
             display: block ; 
             clear: both ; 
+            width: 5rem;
             animation: waving 5s linear infinite; 
+        }
+        &::before {
+            margin-right: 5rem ;
+        }
+        &::after {
+            margin-left: 5rem ;
         }
     }
     .process__container {
@@ -100,13 +107,13 @@
         transform: translateY(0) ; 
     }
     25%{
-        transform: translateY(.5rem) ; 
+        transform: translateY(3rem) ; 
     }
     50%{
         transform: translateY(0) ; 
     }
     75%{
-        transform: translateY(-.5rem) ; 
+        transform: translateY(-1rem) ; 
     }
     100%{
         transform: translateY(0) ; 

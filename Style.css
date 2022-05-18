@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -1806,13 +1805,22 @@ li {
 }
 
 .process .process__header::after, .process .process__header::before {
-  content: "  ";
+  content: url("../../svg/svgarrowbottom.svg");
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   display: block;
   clear: both;
+  width: 5rem;
   -webkit-animation: waving 5s linear infinite;
           animation: waving 5s linear infinite;
+}
+
+.process .process__header::before {
+  margin-right: 5rem;
+}
+
+.process .process__header::after {
+  margin-left: 5rem;
 }
 
 .process .process__container {
@@ -1970,16 +1978,16 @@ li {
             transform: translateY(0);
   }
   25% {
-    -webkit-transform: translateY(0.5rem);
-            transform: translateY(0.5rem);
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
   }
   50% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
   75% {
-    -webkit-transform: translateY(-0.5rem);
-            transform: translateY(-0.5rem);
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
   }
   100% {
     -webkit-transform: translateY(0);
@@ -1993,16 +2001,16 @@ li {
             transform: translateY(0);
   }
   25% {
-    -webkit-transform: translateY(0.5rem);
-            transform: translateY(0.5rem);
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
   }
   50% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
   75% {
-    -webkit-transform: translateY(-0.5rem);
-            transform: translateY(-0.5rem);
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
   }
   100% {
     -webkit-transform: translateY(0);
