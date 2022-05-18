@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -1805,7 +1806,9 @@ li {
 }
 
 .process .process__header::after, .process .process__header::before {
-  content: "down";
+  content: "  ";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
   display: block;
   clear: both;
   -webkit-animation: waving 5s linear infinite;

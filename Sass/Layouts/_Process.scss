@@ -11,7 +11,9 @@
         display: flex;
         align-items: center;
         &::after , &::before{
-            content: "down" ; 
+            content: "\f063" +"\00A0" + "\00A0" +"\f063" ; 
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
             display: block ; 
             clear: both ; 
             animation: waving 5s linear infinite; 
