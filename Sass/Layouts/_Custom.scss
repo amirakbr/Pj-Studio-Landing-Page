@@ -1,8 +1,10 @@
 .custom {
     .custom__container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 2em 0;
+        grid-template-columns:repeat(auto-fit , minmax(47% , 1fr));
+        align-items: center;
+        gap: 5rem;
+        padding: 2rem;
         margin: 0 0 6em 0 ;
         .custom__left {
             display: flex;
@@ -10,7 +12,14 @@
             .custom__banner {
                 padding: 0.5em;
                 height: 100%;
-                &::after{
+                width: 100%;
+                &:hover:after {
+                    transform: translate(50% , 0%) rotate(540deg);
+                }
+                &:hover:before {
+                    transform: translate(50% , 0%) rotate(-360deg);
+                }
+                &::after  , &::before{
                     display: table;
                     content: "";
                     position: absolute;
@@ -20,11 +29,20 @@
                     border-radius: 50%;
                     bottom: .5rem;
                     position: absolute;
-                    left: -12rem;
+                    rotate: 0deg;
+                    transition: all .8s ease-in-out;
+                    z-index: +11;
+                    right: 50%;
+                    transform-origin: center;
+                    transform: translate(50% , 0%) rotate(0deg);
+                }
+                &::before {
+                    border-right-color: orangered;
+                    border-bottom-color: $primary--clr;
                 }
                 .img__banner {
                     object-fit: contain;
-                    z-index: +100;
+                    z-index: +15;
                     height: 40rem;
                 }
                 .custom__bar1 {
@@ -32,47 +50,87 @@
                     width: 15rem;
                     height: 8rem;
                     top: -2.5rem;
-                    right: -8rem ;
+                    right: 20%;
+                    transform: translate(80% , 0);
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    padding: .4em;
+                    z-index: +15;
+                    border-radius: 2rem;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: inherit;
+                        height: inherit;
+                        background-image: linear-gradient(to right, #d16ba5, #c86fb7, #ba74c8, #a77bd9, #8c83e7, #6e93f4, #49a2fc, #00afff, #00c4ff, #00d8ff, #07eafa, #5ffbf1);
+                        background-size: 400%;
+                        background-position: left;
+                        transition: all .5s ease-in-out;
+                        filter: blur(.5rem);
+                        border-radius: 2rem;
+                    }
+                    &:hover:before {
+                        background-position: right;
+                    }
                     img {
                         padding: .3em;
                         object-fit: fill;
-                        border-radius: 0 !important;
-                        z-index: +100;
+                        border-radius: 2rem;
+                        z-index: +13;
                     }
                 }
                 .custom__bar2 {
                     position: absolute;
-                    width: 8rem;
-                    height: 8rem;
+                    width: 12rem;
+                    height: 12rem;
                     top: -2.5rem;
-                    left: 0rem;
+                    left: 20%;
+                    transform: translate(-20% ,0);
                     background-color: #D8EBF2;
+                    padding: .2rem;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     border-radius: 50%;
+                    z-index: +13;
+                    &::after {
+                        position: absolute;
+                        z-index: -1;
+                        width: 105%;
+                        height: 105%;
+                        content: "";
+                        display: table;
+                        clear: both;
+                        border-radius: 50%;
+                        background: #CC95C0;
+                        background: -webkit-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
+                        background: linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
+                        background-size: 400%;
+                        background-position: left;
+                        transition: all .5s ease-in-out;
+                    }
+                    &:hover:after {
+                        background-position: right;
+                        rotate: 720deg;
+                    }
                 }
                 img {
                     object-fit: fill;
                     border-radius: 50%;
-                    z-index: +100;
+                    z-index: +10;
                 }
             }
         }
         .custom__right {
             display: grid;
             grid-template-rows: 1fr 1fr 1fr;
-            grid-gap: .8em 0;
+            grid-gap: 3rem 0;
             align-items: center;
             justify-content: space-evenly;
             .custom__right__card {
-                padding: 0.5em 1em;
+                padding: 1.5rem 1rem;
                 transition: all .5s ease-in-out;
-                box-shadow: 4px 7px 37px 12px rgba(60,60,60,0.21);
+                box-shadow: 0rem 1rem 1rem -.5rem rgb(181, 181, 181);
                 .custom__card__title {
                     line-height: 3.5rem;
                     font-size: $font-size-large;
@@ -90,9 +148,9 @@
                 padding-left: 2em;
                 background-color: #ffffffd6;
                 &:hover {
-                    background-color: rgb(255, 242, 200);
-                    box-shadow: 4px 7px 37px 12px #3C3C3C;
-                    transform: translateX(-10rem);
+                    background-color: rgb(255, 252, 244);
+                    box-shadow: 2rem 1rem 1rem -.5rem rgb(181, 181, 181);
+                    transform: translateX(-3%);
                 }
             }
             .crc2 {
@@ -101,9 +159,9 @@
                 padding-left: 2em;
                 background-color: #ffffffd6;
                 &:hover {
-                    background-color: rgb(196, 254, 255);
-                    box-shadow: 4px 7px 37px 12px #3C3C3C;
-                    transform: translateX(+10rem);
+                    background-color: rgb(238, 255, 255);
+                    box-shadow: -2rem 1rem 1rem -.5rem rgb(181, 181, 181);
+                    transform: translateX(+3%);
                 }
             }
             .crc3 {
@@ -111,9 +169,9 @@
                 border-radius: .6em;
                 padding-left: 2em;
                 &:hover {
-                    background-color: rgb(197, 255, 206);
-                    box-shadow: 4px 7px 37px 12px #3C3C3C;
-                    transform: translateX(-10rem);
+                    background-color: rgb(246, 255, 247);
+                    box-shadow: 2rem 1rem 1rem -.5rem rgb(181, 181, 181);
+                    transform: translateX(-3%);
                 }
             }
         }

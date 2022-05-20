@@ -4,48 +4,48 @@
     margin: 15em 0;
     margin-top: 7rem;
     display: flex;
+    background-color: rgba(226, 226, 226, 0.589);
     .featuer__container {
         display: grid;
-        grid-template-columns: repeat(auto-fit , minmax(47% , 1fr));
+        grid-template-columns: repeat(auto-fit , minmax(46% , 1fr));
         gap: 5rem;
         margin: 1.5em auto;
         width: 100%;
-        padding: 2rem 0;
-        background-color: rgba(226, 226, 226, 0.589);
-
-        &::before{
-            content: "";
-            display: table;
-            clear: both;
-            position: absolute;
-            width: 50%;
-            height: 100%;
-            left: 0;
-            background-color: $primary--clr;
-            border-radius: 20rem 15rem 18rem 28rem / 19rem 12rem 22rem 22rem;
-            animation: glovyanimation 8s linear infinite;
-            z-index: -1;
-            rotate: -10deg;
-        }
+        padding: 4rem 0 2rem 0;
+        align-items: center;
         .phone__container{
             display: flex;
             justify-content: center;
             align-items: center;
             align-items: center;
+            &::before{
+                content: "";
+                display: table;
+                clear: both;
+                position: absolute;
+                width: 120%;
+                height: 140%;
+                left: 0;
+                background-color: $primary--clr;
+                animation: glovyanimation 8s linear infinite;
+                z-index: -1;
+                rotate: -10deg;
+            }
             .feature__phone{
                 display: flex;
                 flex-direction: column;
                 clear: both;
-                width: 20rem;
-                height: 32rem;
-                border-radius: 1rem;
+                width: 85%;
+                height: 33rem;
+                border-radius: 2rem;
                 border: .1rem solid black;
-                top: -4rem;
                 align-items: flex-end;
-                transition: all .8s ease-in-out;
-            &:hover {
-                transform: translateY(-3rem);
-            }
+                transition: all .5s ease-in-out;
+                background-color: rgb(132, 132, 132);
+                transform: translateY(-0%);
+                    &:hover {
+                        transform: translateY(-3%);
+                    }
                 .phone__up {
                     width: 100%;
                     height: 2rem;
@@ -53,7 +53,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    border-radius: 1rem 1rem 0 0 ;
+                    border-radius: 2rem 2rem 0 0 ;
                     .phone__up--cam {
                         height: 50%;
                         width: 1rem;
@@ -83,18 +83,21 @@
                     width: 100%;
                     height: 28rem;
                     @include dsply-column-cntr-cntr ;
+                    border: 0rem solid black;
+                    border-left-width: 1rem;
+                    border-right-width: 1rem;
                 }
                 .phone__bottom {
                     width: 100%;
-                    height: 2rem;
+                    height: 3rem;
                     background-color: black;
-                    border-radius: 0 0 1rem 1rem ;
+                    border-radius: 0 0 2rem 2rem ;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     .phone__button--key {
                         width: 1.7rem;
-                        height: 70%;
+                        height: 1.7rem;
                         background-color: #6C6D70;
                         border: .1em solid white;
                         border-radius: 50%;
@@ -106,11 +109,11 @@
             text-align: left;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: center;
             align-items: center;
             .feature__context {
                 font-size: $font-size-normal;
-                color: gray;
+                color: $gray-scale;
                 line-height: 3rem;
                 width: 100%;
             }
@@ -118,33 +121,29 @@
                 font-size: $font-size-large;
                 line-height: 4rem;
                 width: 100%;
+                margin: 1rem 0;
             }
         }
         .feature__button {
             display: flex;
-            height: 5rem;
+            align-items: center;
             width: 100%;
+            padding: 0 2rem;
             .left__feature__button  , .right__feature__button{
-                width: 30%;
-                margin: 0 auto;
+                margin-top: 5rem;
                 img {
                     width: 10rem;
                     height: 10rem;
-                    transition: all .8s ease-in-out;
+                    transition: all .3s ease-in-out;
+                    filter : drop-shadow(0rem 0rem 0rem rgb(184, 184, 184)) ;
                      &:hover {
-                        transform: translateY(-3rem);
+                        transform: translateY(-5%);
+                        filter : drop-shadow(0rem 2rem .3rem gray) ;
                      }
                 }
             }
             .right__feature__button {
-                img {
-                    float: left;
-                }
-            }
-            .left__feature__button {
-                img {
-                    float: right;
-                }
+                margin-left: 10rem;
             }
         }
     }    
@@ -188,7 +187,7 @@
         border-radius: 55rem 60rem 30rem 60rem / 19rem 37rem 34rem 35rem;
     }
     75%{
-        border-radius: 65rem 70rem 40rem 50rem / 19rem 47rem 54rem 55rem;
+        border-radius: 55rem 60rem 30rem 40rem / 19rem 37rem 44rem 35rem;
     }
     100%{
         border-radius: 20rem 15rem 38rem 68rem / 19rem 12rem 22rem 22rem;
