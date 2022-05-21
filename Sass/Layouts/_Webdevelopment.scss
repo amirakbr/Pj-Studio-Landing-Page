@@ -5,10 +5,7 @@
     display: flex;
     .web--dev__container{
         display: grid;
-        @include grid-gtc-3(1fr , 5rem ,1fr) ;
-        justify-content: baseline;
-        align-items: center;
-        margin: 0 4em;
+        grid-template-columns: repeat(auto-fit , minmax(50% , 1fr));
         .web--dev__left {
             padding: 1em 2em;
             p {

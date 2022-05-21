@@ -2314,16 +2314,8 @@ li {
 .web--dev .web--dev__container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 5rem 1fr;
-      grid-template-columns: 1fr 5rem 1fr;
-  display: grid;
-  -webkit-box-pack: baseline;
-      -ms-flex-pack: baseline;
-          justify-content: baseline;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 4em;
+  -ms-grid-columns: (minmax(50%, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
 }
 
 .web--dev .web--dev__container .web--dev__left {
