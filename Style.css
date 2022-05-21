@@ -1271,6 +1271,8 @@ li {
      object-fit: contain;
   z-index: +15;
   height: 40rem;
+  -webkit-transform: translateY(-3%);
+          transform: translateY(-3%);
 }
 
 .custom .custom__container .custom__left .custom__banner .custom__bar1 {
@@ -1342,7 +1344,7 @@ li {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 50%;
-  z-index: +13;
+  z-index: +20;
 }
 
 .custom .custom__container .custom__left .custom__banner .custom__bar2::after {
@@ -1417,7 +1419,7 @@ li {
 }
 
 .custom .custom__container .custom__right .crc1:hover {
-  background-color: #fffcf4;
+  background-color: #ffeedd;
   -webkit-box-shadow: 2rem 1rem 1rem -0.5rem #b5b5b5;
           box-shadow: 2rem 1rem 1rem -0.5rem #b5b5b5;
   -webkit-transform: translateX(-3%);
@@ -1432,7 +1434,7 @@ li {
 }
 
 .custom .custom__container .custom__right .crc2:hover {
-  background-color: #eeffff;
+  background-color: #e1fffe;
   -webkit-box-shadow: -2rem 1rem 1rem -0.5rem #b5b5b5;
           box-shadow: -2rem 1rem 1rem -0.5rem #b5b5b5;
   -webkit-transform: translateX(3%);
@@ -1446,7 +1448,7 @@ li {
 }
 
 .custom .custom__container .custom__right .crc3:hover {
-  background-color: #f6fff7;
+  background-color: #e1ffe4;
   -webkit-box-shadow: 2rem 1rem 1rem -0.5rem #b5b5b5;
           box-shadow: 2rem 1rem 1rem -0.5rem #b5b5b5;
   -webkit-transform: translateX(-3%);
