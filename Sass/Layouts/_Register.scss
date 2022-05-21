@@ -1,12 +1,10 @@
 @import '../Ultility/variable' ;
 .register {
-    display: grid;
-    grid-template-columns: 1fr 6fr 1fr;
     padding: 2em 2em;
     margin: 0 0 6em 0 ;
     .register__container {
         display: grid;
-        grid-template-columns: 1fr 4rem 1fr;
+        grid-template-columns: repeat(auto-fit , minmax(50% , 1fr));
         align-items: center;
         justify-content: center;
         padding: .5em;

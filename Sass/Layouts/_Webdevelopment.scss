@@ -1,13 +1,13 @@
 @import '../Ultility/variable' ; 
 .web--dev {
-    padding: 2em 0;
     margin: 0 0 6em 0 ;
     display: flex;
     .web--dev__container{
         display: grid;
-        grid-template-columns: repeat(auto-fit , minmax(50% , 1fr));
+        grid-template-columns: repeat(auto-fit , minmax(47% , 1fr));
+        gap: 5rem;
         .web--dev__left {
-            padding: 1em 2em;
+            padding: 1.5rem 0 1.5rem 4rem;
             p {
                 font-size: $font-size-normal;
                 color: gray;
@@ -19,12 +19,17 @@
                 margin: .5em 0;
             }
             .web--dev__icon {
-                @include dsply-flex-cntr(flex-start ,flex-start) ;
+                @include dsply-flex-cntr-cntr ;
                 margin-top: 2em;
+                flex-wrap: wrap;
+                gap: 1rem;
                 .web--dev__icon__right , .web--dev__icon__left {
                     @include dsply-column-cntr(flex-start , flex-start) ;
                     color: white;
                     transition: all .5s ease-in-out;
+                    width: Max(47% , 17rem);
+                    transform: translateY(0%);
+                    gap: 1rem;
                     &:hover span{
                         color: #13B237;
                     }
@@ -34,6 +39,7 @@
                         border-radius: .5rem;
                         font-size: $font-size-large;
                         margin: .5em 0;
+                        transform: translateY(0%);
                     }
                     span {
                         font-size: $font-size-normal;
@@ -42,7 +48,7 @@
                         margin: .15em 0;
                     }
                     &:hover {
-                        transform: translateY(-3rem);
+                        transform: translateY(-3%);
                     }
                 }
                 .web--dev__icon__left {
@@ -56,7 +62,7 @@
             }
         }
         .web--dev__right {
-            padding: 1.5em 2em;
+            padding: 1.5rem 4rem 1.5rem 0 ;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -65,33 +71,5 @@
                 align-self: center;
             }
         }
-    }
-}
-.move__left__animate {
-    animation: move-left 1s ease-in-out forwards;
-}
-.move__right__animate {
-    animation: move-right 1s ease-in-out forwards;
-}
-@keyframes move-left {
-    0%{
-        transform: translateX(-40rem);
-        opacity: 0;
-        display: none;
-    }
-    100%{
-        transform: translateX(0rem);
-        opacity: 1;
-    }
-}
-@keyframes move-right {
-    0%{
-        transform: translateX(+30rem);
-        opacity: 0;
-        display: none;
-    }
-    100%{
-        transform: translateX(0rem);
-        opacity: 1;
     }
 }
