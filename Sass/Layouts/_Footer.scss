@@ -4,14 +4,19 @@
     width: 100%;
     margin-top: 5em;
     background-color: rgb(255, 255, 255);
+    padding: 1rem;
     .footer__container{
-        @include grid-gtc-3(1fr , 3fr , 2fr) ; 
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit , minmax(24% , 1fr));
+        gap: 1rem ;
         margin: 3em 1.5em 0 1.5em; 
-        padding: .5em 1em;
-        grid-gap: 0 1em;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         .footer__elem1 {
+            * {
+                width: 100%;
+            }
             @include dsply-column-cntr-cntr ;
             img {
                 height: 6rem;
