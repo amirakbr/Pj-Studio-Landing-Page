@@ -1,15 +1,14 @@
 @import '../Ultility/variable' ;
 .register {
-    padding: 2em 2em;
-    margin: 0 0 6em 0 ;
     .register__container {
         display: grid;
-        grid-template-columns: repeat(auto-fit , minmax(50% , 1fr));
+        grid-template-columns: repeat(auto-fit , minmax(47% , 1fr));
+        gap: 5rem;
         align-items: center;
         justify-content: center;
         padding: .5em;
         .register__left {
-            margin-left: 03em;
+            @include dsply-column-cntr-cntr ; 
             h4 {
                 font-size: $font-size-super-large;
                 margin: .5em 0;
