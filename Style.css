@@ -2633,9 +2633,21 @@ li {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: .4em;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.footer .footer__container .footer__elem2--right ul li::before, .footer .footer__container .footer__elem2--left ul li::before {
+.footer .footer__container .footer__elem2--right ul li p, .footer .footer__container .footer__elem2--left ul li p {
+  padding: .5rem 1rem;
+}
+
+.footer .footer__container .footer__elem2--right ul li p::before, .footer .footer__container .footer__elem2--left ul li p::before {
   width: 100%;
   height: .1em;
   background-color: rebeccapurple;
@@ -2647,9 +2659,13 @@ li {
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
   opacity: 0;
+  height: 100%;
+  width: .3rem;
+  left: 0;
+  background-color: #bb1eff;
 }
 
-.footer .footer__container .footer__elem2--right ul li::after, .footer .footer__container .footer__elem2--left ul li::after {
+.footer .footer__container .footer__elem2--right ul li p::after, .footer .footer__container .footer__elem2--left ul li p::after {
   width: 100%;
   height: .1em;
   background-color: rebeccapurple;
@@ -2661,14 +2677,18 @@ li {
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
   opacity: 0;
+  height: 100%;
+  width: .3rem;
+  right: 0;
+  background-color: #bb1eff;
 }
 
-.footer .footer__container .footer__elem2--right ul li:hover::after, .footer .footer__container .footer__elem2--left ul li:hover::after {
+.footer .footer__container .footer__elem2--right ul li p:hover::after, .footer .footer__container .footer__elem2--left ul li p:hover::after {
   bottom: 0em;
   opacity: 1;
 }
 
-.footer .footer__container .footer__elem2--right ul li:hover::before, .footer .footer__container .footer__elem2--left ul li:hover::before {
+.footer .footer__container .footer__elem2--right ul li p:hover::before, .footer .footer__container .footer__elem2--left ul li p:hover::before {
   top: 0em;
   opacity: 1;
 }
@@ -2681,6 +2701,12 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer .footer__container .footer__elem3 h2 {
@@ -2692,6 +2718,7 @@ li {
   font-size: 1.8rem;
   color: gray;
   margin: 1rem 0;
+  text-align: center;
 }
 
 .footer .footer__container .footer__elem3 form {
@@ -2703,21 +2730,14 @@ li {
   margin-bottom: 1em;
   border-radius: .3em;
   border: .1em solid black;
-  padding: .2em;
-  background-color: white;
 }
 
 .footer .footer__container .footer__elem3 form input {
   font-size: 1.5rem;
-  padding: .2em 0 .2em .2em;
+  padding: .2em .2em .2em .2em;
   border-radius: .3em;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
-}
-
-.footer .footer__container .footer__elem3 form input:focus {
-  padding-left: .8em;
-  font-size: 1.8rem;
 }
 
 .footer .footer__container .footer__elem3 form button {
@@ -2733,6 +2753,8 @@ li {
           justify-content: center;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 .3em .3em 0;
 }
 
 .footer .footer__container .footer__elem3 form button p {

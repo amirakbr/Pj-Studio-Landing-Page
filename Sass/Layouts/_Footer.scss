@@ -66,28 +66,38 @@
                         color: gray;
                         display: flex;
                         flex-direction: column;
-                        
                         margin-top: .4em;
-                        &::before {
-                            @include before-link ;
-                        }
-                        &::after {
-                            @include after-link ;
-                        }
-                        &:hover::after {
-                            bottom: 0em;
-                            opacity: 1;
-                        }
-                        &:hover::before {
-                            top: 0em;
-                            opacity: 1;
+                        @include dsply-column-cntr-cntr ;
+                        p {
+                            padding: .5rem 1rem;
+                            &::before {
+                                @include before-link ;
+                                height: 100%;
+                                width: .3rem;
+                                left: 0;
+                                background-color: $primary--clr;
+                            }
+                            &::after {
+                                @include after-link ;
+                                height: 100%;
+                                width: .3rem;
+                                right: 0;
+                                background-color: $primary--clr;
+                            }
+                            &:hover::after {
+                                bottom: 0em;
+                                opacity: 1;
+                            }
+                            &:hover::before {
+                                top: 0em;
+                                opacity: 1;
+                            }
                         }
                     }
                 }
             }
         .footer__elem3 {
-            display: flex;
-            flex-direction: column;
+            @include dsply-column-cntr-cntr ;
             h2 {
                 font-size : $font-size-large ; 
                 margin: .5rem 0 ;
@@ -96,6 +106,7 @@
                 font-size: $font-size-up-small;
                 color: gray;
                 margin: 1rem 0 ;
+                text-align: center;
             }
             form {
                 display: grid;
@@ -104,22 +115,18 @@
                 margin-bottom: 1em;
                 border-radius: .3em;
                 border: .1em solid black;
-                padding: .2em;
-                background-color: white;
                 input {
                     font-size: $font-size-small;
-                    padding: .2em 0 .2em .2em ; 
+                    padding: .2em .2em .2em .2em ; 
                     border-radius: .3em;
                     transition: all 0.3s ease-in;
-                    &:focus {
-                        padding-left: .8em;
-                        font-size: $font-size-up-small;
-                    }
                 }
                 button {
                     padding: .1em !important;
                     @include dsply-flex-cntr-cntr ;
                     box-shadow: none !important;
+                    border: none !important;
+                    border-radius: 0 .3em .3em 0;
                     p {
                         color: white ;
                         transition: all .4s ease-in-out;
