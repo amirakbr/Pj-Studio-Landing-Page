@@ -2734,7 +2734,7 @@ li {
 
 .footer .footer__container .footer__elem3 form input {
   font-size: 1.5rem;
-  padding: .2em .2em .2em .2em;
+  padding: .2em;
   border-radius: .3em;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
