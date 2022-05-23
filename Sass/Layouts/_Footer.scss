@@ -2,7 +2,7 @@
 .footer {
     display: flex;
     width: 100%;
-    margin-top: 5em;
+    margin-top: 1rem;
     background-color: rgb(255, 255, 255);
     padding: 1rem;
     .footer__container{
@@ -10,10 +10,11 @@
         display: grid;
         grid-template-columns: repeat(auto-fit , minmax(24% , 1fr));
         gap: 1rem ;
-        margin: 3em 1.5em 0 1.5em; 
+        margin: 1em 1.5em 0 1.5em; 
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         .footer__elem1 {
+            @include dsply-column-cntr-cntr ; 
             * {
                 width: 100%;
             }
@@ -46,25 +47,26 @@
                 }
             }
         }
-        .footer__elem2 {
-            display: flex;
-            justify-content: space-around;
             .footer__elem2--right , .footer__elem2--left {
-                display: flex;
-                flex-direction: column;
+                @include dsply-column-cntr-cntr ;
+                align-items: flex-start;
+                text-align: center;
                 h2 {
                     font-size : $font-size-large ; 
                     margin: .5rem 0 ;
+                    width: 100%;
                 }
                 ul {
                     list-style-type: none;
                     margin: .8rem 0 ;
+                    width: 100%;
+                    text-align: center;
                     li {
                         font-size: $font-size-up-small;
                         color: gray;
                         display: flex;
                         flex-direction: column;
-                        width: max-content;
+                        
                         margin-top: .4em;
                         &::before {
                             @include before-link ;
@@ -83,7 +85,6 @@
                     }
                 }
             }
-        }
         .footer__elem3 {
             display: flex;
             flex-direction: column;

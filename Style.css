@@ -2475,7 +2475,7 @@ li {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  margin-top: 5em;
+  margin-top: 1rem;
   background-color: white;
   padding: 1rem;
 }
@@ -2487,13 +2487,13 @@ li {
   -ms-grid-columns: (minmax(24%, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(24%, 1fr));
   gap: 1rem;
-  margin: 3em 1.5em 0 1.5em;
+  margin: 1em 1.5em 0 1.5em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .footer .footer__container .footer__elem1 {
@@ -2510,6 +2510,10 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer .footer__container .footer__elem1 * {
@@ -2575,15 +2579,7 @@ li {
   border-radius: 50%;
 }
 
-.footer .footer__container .footer__elem2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.footer .footer__container .footer__elem2 .footer__elem2--right, .footer .footer__container .footer__elem2 .footer__elem2--left {
+.footer .footer__container .footer__elem2--right, .footer .footer__container .footer__elem2--left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2591,19 +2587,32 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: center;
 }
 
-.footer .footer__container .footer__elem2 .footer__elem2--right h2, .footer .footer__container .footer__elem2 .footer__elem2--left h2 {
+.footer .footer__container .footer__elem2--right h2, .footer .footer__container .footer__elem2--left h2 {
   font-size: 2.7rem;
   margin: .5rem 0;
+  width: 100%;
 }
 
-.footer .footer__container .footer__elem2 .footer__elem2--right ul, .footer .footer__container .footer__elem2 .footer__elem2--left ul {
+.footer .footer__container .footer__elem2--right ul, .footer .footer__container .footer__elem2--left ul {
   list-style-type: none;
   margin: .8rem 0;
+  width: 100%;
+  text-align: center;
 }
 
-.footer .footer__container .footer__elem2 .footer__elem2--right ul li, .footer .footer__container .footer__elem2 .footer__elem2--left ul li {
+.footer .footer__container .footer__elem2--right ul li, .footer .footer__container .footer__elem2--left ul li {
   font-size: 1.8rem;
   color: gray;
   display: -webkit-box;
@@ -2613,13 +2622,10 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   margin-top: .4em;
 }
 
-.footer .footer__container .footer__elem2 .footer__elem2--right ul li::before, .footer .footer__container .footer__elem2 .footer__elem2--left ul li::before {
+.footer .footer__container .footer__elem2--right ul li::before, .footer .footer__container .footer__elem2--left ul li::before {
   width: 100%;
   height: .1em;
   background-color: rebeccapurple;
@@ -2633,7 +2639,7 @@ li {
   opacity: 0;
 }
 
-.footer .footer__container .footer__elem2 .footer__elem2--right ul li::after, .footer .footer__container .footer__elem2 .footer__elem2--left ul li::after {
+.footer .footer__container .footer__elem2--right ul li::after, .footer .footer__container .footer__elem2--left ul li::after {
   width: 100%;
   height: .1em;
   background-color: rebeccapurple;
@@ -2647,12 +2653,12 @@ li {
   opacity: 0;
 }
 
-.footer .footer__container .footer__elem2 .footer__elem2--right ul li:hover::after, .footer .footer__container .footer__elem2 .footer__elem2--left ul li:hover::after {
+.footer .footer__container .footer__elem2--right ul li:hover::after, .footer .footer__container .footer__elem2--left ul li:hover::after {
   bottom: 0em;
   opacity: 1;
 }
 
-.footer .footer__container .footer__elem2 .footer__elem2--right ul li:hover::before, .footer .footer__container .footer__elem2 .footer__elem2--left ul li:hover::before {
+.footer .footer__container .footer__elem2--right ul li:hover::before, .footer .footer__container .footer__elem2--left ul li:hover::before {
   top: 0em;
   opacity: 1;
 }
