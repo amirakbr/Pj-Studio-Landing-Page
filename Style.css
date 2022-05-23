@@ -2392,6 +2392,11 @@ li {
   gap: 1rem;
 }
 
+.web--dev .web--dev__container .web--dev__left .web--dev__icon *, .web--dev .web--dev__container .web--dev__left .web--dev__icon *::after, .web--dev .web--dev__container .web--dev__left .web--dev__icon *::before {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
 .web--dev .web--dev__container .web--dev__left .web--dev__icon .web--dev__icon__right, .web--dev .web--dev__container .web--dev__left .web--dev__icon .web--dev__icon__left {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2407,8 +2412,8 @@ li {
       -ms-flex-pack: start;
           justify-content: flex-start;
   color: white;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
   width: Max(47%, 17rem);
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
@@ -2439,6 +2444,11 @@ li {
 .web--dev .web--dev__container .web--dev__left .web--dev__icon .web--dev__icon__right:hover, .web--dev .web--dev__container .web--dev__left .web--dev__icon .web--dev__icon__left:hover {
   -webkit-transform: translateY(-3%);
           transform: translateY(-3%);
+}
+
+.web--dev .web--dev__container .web--dev__left .web--dev__icon .web--dev__icon__right:hover i, .web--dev .web--dev__container .web--dev__left .web--dev__icon .web--dev__icon__left:hover i {
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
 }
 
 .web--dev .web--dev__container .web--dev__left .web--dev__icon .web--dev__icon__left i {

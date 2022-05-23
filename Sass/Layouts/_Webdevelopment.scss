@@ -23,10 +23,13 @@
                 margin-top: 2em;
                 flex-wrap: wrap;
                 gap: 1rem;
+                * , *::after , *::before {
+                    transition: all .3s ease-in-out;
+                }
                 .web--dev__icon__right , .web--dev__icon__left {
                     @include dsply-column-cntr(flex-start , flex-start) ;
                     color: white;
-                    transition: all .5s ease-in-out;
+                    transition: all .3s ease-in-out;
                     width: Max(47% , 17rem);
                     transform: translateY(0%);
                     gap: 1rem;
@@ -49,6 +52,9 @@
                     }
                     &:hover {
                         transform: translateY(-3%);
+                        i {
+                            transform: translateY(10%);
+                        }
                     }
                 }
                 .web--dev__icon__left {
